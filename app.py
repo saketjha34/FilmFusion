@@ -100,8 +100,16 @@ if "last_clicked" not in st.session_state:
 # Genre-Based Recommendation Container
 with st.container(border=True):
     st.subheader("🎭 Genre-Based Movie Recommendations")
-    
-    genre_query = st.text_input("Enter Genre(s) (comma-separated)", placeholder="Science Fiction, Crime", key="genre_query")
+
+    unique_genres = ['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy', 
+                     'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'TV Movie', 'Thriller', 
+                     'War', 'Western']
+
+    selected_genres = st.multiselect("Select Genres", options=unique_genres, key="selected_genres")
+
+    # Convert selected genres list into a comma-separated string
+    genre_query = ", ".join(selected_genres)
+
     sort_by = st.selectbox("Sort By", ["runtime", "vote_share", "popularity", "budget_revenue_ratio"], key="sort_by")
     years_old = st.slider("Maximum Years Old", 0, 120, 6, key="years_old")
     language = st.selectbox("Select Language", ['English', 'Spanish', 'Finnish', 'Polish', 'German', 'Korean',
@@ -119,6 +127,7 @@ with st.container(border=True):
             st.session_state.df, genre_query, sort_by, years_old, language, k
         )
         st.session_state.last_clicked = "genre"
+
 
 # Query-Based Recommendation Container
 with st.container(border=True):
@@ -143,3 +152,4 @@ with st.container(border=True):
     elif st.session_state.last_clicked == "query" and st.session_state.query_recommendations is not None:
         st.subheader("🎬 Query-Based Recommendations")
         st.write(st.session_state.query_recommendations)
+        
