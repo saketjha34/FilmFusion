@@ -1,6 +1,6 @@
 # FilmFusion - AI-Powered Movie Recommender System
 
-## 🌟 Live Demo 🚀 **Try it out here**: [FilmFusionAI](https://filmfusionai.streamlit.app/)
+#### 🌟 Live Demo 🚀 **Try it out here**: [FilmFusionAI](https://filmfusionai.streamlit.app/)
 
 
 ## 📌 Overview
