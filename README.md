@@ -83,7 +83,8 @@ FilmFusion/
 │   ├── embedding_model.joblib # saved embedding model
 │── src/
 │   ├── movie_embeddings_faiss.py  # Preprocess Data and Generate Embeddings
-│   ├── recommend_movies_faiss.py # Basic CLI Movie Recommender
+│   ├── recommend_movies_faiss.py # Query Based Movie Recommendations using FAISS
+│   ├── genre_based_recommendation.py # Genre Based Movie Recommendations
 │── images/
 │   ├── images  # images and assets
 │── app.py  # Main Streamlit app
