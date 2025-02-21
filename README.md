@@ -77,6 +77,8 @@ FilmFusion/
 │── assets/
 │   ├── embeddings.npy  # Precomputed embeddings
 │   ├── faiss_index.idx  # FAISS index
+│   ├── df_filtered.csv  # Filtered df
+│   ├── embedding_model.joblib # saved embedding model
 │── src/
 │   ├── movie_embeddings_faiss.py  # Preprocess Data and Generate Embeddings
 │   ├── recommend_movies_faiss.py # Basic CLI Movie Recommender
@@ -85,6 +87,7 @@ FilmFusion/
 │── app.py  # Main Streamlit app
 │── requirements.txt  # Dependencies
 │── README.md  # Project documentation
+│── .gitignore  # git ignore
 ```
 
 ---
@@ -143,4 +146,3 @@ This project is licensed under the Apache-2.0 License.
 ---
 
 📢 **Try the live app now:** [FilmFusion](https://filmfusionai.streamlit.app/) 🚀
-
