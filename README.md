@@ -47,7 +47,7 @@ FilmFusion is an advanced AI-powered movie recommendation system that helps user
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/FilmFusion.git
+   git clone https://github.com/saketjha34/FilmFusion.git
    cd FilmFusion
    ```
 
@@ -77,6 +77,11 @@ FilmFusion/
 │── assets/
 │   ├── embeddings.npy  # Precomputed embeddings
 │   ├── faiss_index.idx  # FAISS index
+│── src/
+│   ├── movie_embeddings_faiss.py  # Preprocess Data and Generate Embeddings
+│   ├── recommend_movies_faiss.py # Basic CLI Movie Recommender
+│── images/
+│   ├── images  # images and assets
 │── app.py  # Main Streamlit app
 │── requirements.txt  # Dependencies
 │── README.md  # Project documentation
@@ -118,7 +123,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests to i
 ---
 
 ## 📜 License
-This project is licensed under the MIT License.
+This project is licensed under the APPACHE 2.0 License.
 
 ---
 
