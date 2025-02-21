@@ -109,6 +109,16 @@ FilmFusion/
 
 ---
 
+## 📖 References
+- **FAISS**: [https://faiss.ai/](https://faiss.ai/)
+- **Sentence Transformers**: [https://www.sbert.net/](https://www.sbert.net/)
+- **TMDB Movie Dataset**: [https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- **Streamlit**: [https://streamlit.io/](https://streamlit.io/)
+- **Python Pandas**: [https://pandas.pydata.org/](https://pandas.pydata.org/)
+- **NumPy**: [https://numpy.org/](https://numpy.org/)
+
+---
+
 ## 🛠️ Future Improvements
 ✅ Improve embedding quality using larger models (e.g., `sentence-transformers/msmarco-distilbert-base-v4`)
 ✅ Add user personalization & collaborative filtering
