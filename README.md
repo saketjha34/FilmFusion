@@ -123,7 +123,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests to i
 ---
 
 ## 📜 License
-This project is licensed under the APPACHE 2.0 License.
+This project is licensed under the Apache-2.0 License.
 
 ---
 
