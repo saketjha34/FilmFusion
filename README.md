@@ -1,4 +1,4 @@
-# 🎬 FilmFusion - AI-Powered Movie Recommender System
+## 🎬 FilmFusion - AI-Powered Movie Recommender System
 
 FilmFusion is an advanced AI-powered movie recommendation system that helps users discover the best movies based on genres or descriptive queries. It leverages state-of-the-art NLP models, FAISS indexing, and rich movie metadata to provide highly relevant recommendations.
 
