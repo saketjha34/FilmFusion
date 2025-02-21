@@ -15,7 +15,7 @@ st.set_page_config(page_title="Movie Recommender", page_icon="🎬", layout="wid
 @st.cache_resource
 def load_data():
     model = SentenceTransformer("all-MiniLM-L6-v2", device=device)
-    df = pd.read_csv("Dataset/TMDB10K.csv")
+    df = pd.read_csv("dataset/TMDB10K.csv")
     embeddings = np.load("assets/embeddings.npy")
     index = faiss.read_index("assets/faiss_index.idx")
     return df, index, embeddings, model
