@@ -1,9 +1,8 @@
-# FilmFusion - AI-Powered Movie Recommender System 🎬
+# FilmFusion - AI-Powered Movie Recommender System
 
 ## 🌟 Live Demo
 🚀 **Try it out here**: [FilmFusionAI](https://filmfusionai.streamlit.app/)
 
----
 
 ## 📌 Overview
 FilmFusion is an advanced **AI-powered movie recommendation system** that helps users find movies based on **genres, descriptions, and preferences**. It leverages **FAISS for fast similarity search**, **Sentence Transformers for text-based recommendations**, and an extensive movie dataset to provide accurate suggestions.
