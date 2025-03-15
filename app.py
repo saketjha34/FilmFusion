@@ -146,10 +146,8 @@ with st.container(border=True):
 with st.container(border=True):
     if st.session_state.last_clicked == "genre" and st.session_state.genre_recommendations is not None:
         st.subheader("🎬 Genre-Based Recommendations")
-        print(st.session_state.genre_recommendations)
         st.write(st.session_state.genre_recommendations)
 
     elif st.session_state.last_clicked == "query" and st.session_state.query_recommendations is not None:
         st.subheader("🎬 Query-Based Recommendations")
         st.write(st.session_state.query_recommendations)
-        
