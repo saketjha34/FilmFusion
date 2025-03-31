@@ -82,9 +82,11 @@ FilmFusion/
 │   ├── df_filtered.csv  # Filtered df
 │   ├── embedding_model.joblib # saved embedding model
 │── src/
+│   ├── __init__.py  # manage imports
 │   ├── movie_embeddings_faiss.py  # Preprocess Data and Generate Embeddings
 │   ├── recommend_movies_faiss.py # Query Based Movie Recommendations using FAISS
 │   ├── genre_based_recommendation.py # Genre Based Movie Recommendations
+│   ├── utils.py # utility functions
 │── images/
 │   ├── images  # images and assets
 │── app.py  # Main Streamlit app
