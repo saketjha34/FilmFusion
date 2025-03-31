@@ -3,17 +3,10 @@ import numpy as np
 import pandas as pd
 import joblib
 from sentence_transformers import SentenceTransformer
+from utils import preprocess_dataset
 
-def preprocess_dataset(df: pd.DataFrame) -> pd.DataFrame:
-    df['description_length'] = df["overview"].str.split(" ").str.len()
-    df['budget_revenue_ratio'] = df.apply(lambda row: row['revenue'] / row['budget'] if row['budget'] != 0 else None, axis=1)
-    df['vote_share'] = df.apply(lambda row: row['vote_average'] * row['vote_count'], axis=1)
-    df['release_date'] = pd.to_datetime(df['release_date'], errors='coerce')
-    df['year'] = df['release_date'].dt.year
-    df['years_old'] = abs(df['year'] - 2023)
-    return df
+
 # Load model
-
 device = 'cpu'
 print(device)
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2", device=device)
