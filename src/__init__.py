@@ -1,9 +1,6 @@
-import genre_based_recommendation
-import movie_embeddings_faiss
-import movie_embeddings_faiss
+from src.utils import preprocess_dataset, recommend_movies_by_genre
 
 __all__ = [
-    "genre_based_recommendation",
-    "movie_embeddings_faiss",
-    "movie_embeddings_faiss",
+    "preprocess_dataset",
+    "recommend_movies_by_genre",
 ]
