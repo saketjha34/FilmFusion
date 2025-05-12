@@ -36,39 +36,7 @@ st.success("✅ Data Loaded Successfully!")
 time.sleep(1)  # Let message be visible
 
 
-# Preprocess Dataset
-# def preprocess_dataset(df: pd.DataFrame) -> pd.DataFrame:
-#     df['description_length'] = df["overview"].str.split(" ").str.len()
-#     df['budget_revenue_ratio'] = df.apply(lambda row: row['revenue'] / row['budget'] if row['budget'] != 0 else None, axis=1)
-#     df['vote_share'] = df.apply(lambda row: row['vote_average'] * row['vote_count'], axis=1)
-#     df['release_date'] = pd.to_datetime(df['release_date'], errors='coerce')
-#     df['year'] = df['release_date'].dt.year
-#     df['years_old'] = abs(df['year'] - 2023)
-#     return df
-
 st.session_state.df = preprocess_dataset(st.session_state.df)
-
-# Recommendation Function by Genre
-# def recommend_movies_by_genre(df: pd.DataFrame, genre_query: str, sort_by: str, years_old: int, language: str, k: int) -> pd.DataFrame:
-#     def safe_convert(val):
-#         if isinstance(val, str):
-#             try:
-#                 return ast.literal_eval(val) if "[" in val else [val]
-#             except:
-#                 return []
-#         elif isinstance(val, list):
-#             return val
-#         else:
-#             return []
-    
-#     df['genres'] = df['genres'].apply(safe_convert)
-#     genre_list = [g.strip() for g in genre_query.split(",")]
-#     filtered_df = df[df['genres'].apply(lambda genres: isinstance(genres, list) and any(g in genres for g in genre_list))]
-#     filtered_df = filtered_df[filtered_df['years_old'] <= years_old]
-#     filtered_df = filtered_df[filtered_df['original_language'] == language]
-#     sorted_df = filtered_df.sort_values(by=[sort_by], ascending=False)
-
-#     return sorted_df[['id', 'title', 'genres', 'vote_average', 'popularity', 'runtime', 'budget_revenue_ratio']].head(k)
 
 
 def recommend_movies_by_query(query: str, top_k: int = 5) -> pd.DataFrame:
@@ -85,9 +53,17 @@ def recommend_movies_by_query(query: str, top_k: int = 5) -> pd.DataFrame:
 
 
 # Title
-st.title("Movie Recommender System 🎬")
-st.subheader("Find the best movies based on your preferences!", divider=True)
+st.markdown(
+    "<h1 style='text-align: center;'>🎬 Movie Recommender</h1>", 
+    unsafe_allow_html=True
+)
 
+st.markdown(
+    "<h3 style='text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 10px;'>"
+    "Get AI-powered movie recommendations based on your favorite movies and TV shows"
+    "</h3>",
+    unsafe_allow_html=True
+)
 
 # Initialize session state variables
 if "genre_recommendations" not in st.session_state:
